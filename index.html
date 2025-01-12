@@ -6,13 +6,19 @@
     <title>Portfolio Software Engineer RevoU</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+   
 </head>
 <body>
     <!-- ini pembuka header -->
     <header>
         <nav>
-            <a href="#" class="logo">🌟</a>
+            <a href="#" class="logo"><img src="assets/img/logo.png" alt=""></a>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <div class="nav-links">
                 <a href="#">Home</a>
                 <a href="#headquarters">Our Profile</a>
@@ -27,13 +33,13 @@
     <div class="container">
          <!-- ini pembuka welcome -->
         <section class="welcome">
-            <h1 id="welcome-text">Hi Mark, Welcome To Website</h1>
-            <p>Ini adalah website portfolio RevoU Course Software Engineer</p>
+            <h1 data-aos="fade-up" id="welcome-text">Hi Bimo, Welcome To Website</h1>
+            <p  data-aos="fade-right" data-aos-delay="200">Ini adalah website portfolio RevoU Course Software Engineer</p>
         </section>
         <!-- penutup welcome -->
 
         <!-- pembuka carousel -->
-        <section class="carousel" id="carousel">
+        <section class="carousel" id="carousel" data-aos="slide-left">
             <div class="carousel-images">
                 <img src="assets/img/img1.jpg" alt="Slide 1">
                 <img src="assets/img/img2.jpg" alt="Slide 2">
@@ -47,7 +53,7 @@
         <div class="dots" id="dots"></div>
             <!-- penutup carousel -->
 
-        <section class="headquarters" id="headquarters">
+        <section class="headquarters" id="headquarters" data-aos="slide-right">
             <h2>Our Headquarters</h2>
             <div class="office-locations">
                 <div class="office">
@@ -68,7 +74,7 @@
             </div>
         </section>
 
-        <section class="contact" id="contact">
+        <section class="contact" id="contact" data-aos="fade-down">
             <h2>Message Us</h2>
             <form class="contact-form" id="contact-form">
                 <div class="form-left">
@@ -118,4 +124,6 @@
     </footer>
 </body>
 <script src="assets/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </html>
