@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Software Engineer RevoU</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <!-- ini pembuka header -->
+    <header>
+        <nav>
+            <a href="#" class="logo">🌟</a>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#headquarters">Our Profile</a>
+                <a href="#">Portfolio</a>
+                <a href="#contact">Message Us</a>
+            </div>
+        </nav>
+    </header>
+    <!-- ini penutup header -->
+
+    
+    <div class="container">
+         <!-- ini pembuka welcome -->
+        <section class="welcome">
+            <h1 id="welcome-text">Hi Mark, Welcome To Website</h1>
+            <p>Ini adalah website portfolio RevoU Course Software Engineer</p>
+        </section>
+        <!-- penutup welcome -->
+
+        <!-- pembuka carousel -->
+        <section class="carousel" id="carousel">
+            <div class="carousel-images">
+                <img src="assets/img/img1.jpg" alt="Slide 1">
+                <img src="assets/img/img2.jpg" alt="Slide 2">
+                <img src="assets/img/img3.jpg" alt="Slide 3">
+            </div>
+            <div class="carousel-controls">
+                <button id="prev">&lt;</button>
+                <button id="next">&gt;</button>
+            </div>
+        </section>
+        <div class="dots" id="dots"></div>
+            <!-- penutup carousel -->
+
+        <section class="headquarters" id="headquarters">
+            <h2>Our Headquarters</h2>
+            <div class="office-locations">
+                <div class="office">
+                    <div class="office-circle">
+                        <h3>Jakarta</h3>
+                    </div>
+                </div>
+                <div class="office">
+                    <div class="office-circle">
+                        <h3>Bandung</h3>
+                    </div>
+                </div>
+                <div class="office">
+                    <div class="office-circle">
+                        <h3>Surabaya</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <h2>Message Us</h2>
+            <form class="contact-form" id="contact-form">
+                <div class="form-left">
+                    <div class="form-group">
+                        <label for="nama">Nama :</label>
+                        <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda">
+                        <small class="text-danger" id="error-nama"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="tanggal">Tanggal Lahir :</label>
+                        <input type="date" name="tgl_lahir" id="tgl_lahir">
+                        <small class="text-danger" id="error-tgl-lahir"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="jeniskelamin">Jenis Kelamin</label>
+                        <label>
+                            <input type="radio" name="jeniskelamin" value="lakilaki" />
+                            Laki-Laki
+                        </label>
+                        <label>
+                            <input type="radio" name="jeniskelamin" value="perempuan" />
+                            Perempuan
+                        </label>
+                        <small class="text-danger" id="error-jeniskelamin"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="pesan">Pesan</label>
+                        <textarea name="pesan" id="pesan" placeholder="Masukkan pesan Anda"></textarea>
+                        <small class="text-danger" id="error-pesan"></small>
+                    </div>
+                </div>
+                <div class="form-right">
+                    <div id="output-message"></div>
+                    <input type="hidden" id="tanggal-saatini" name="tanggal_ini">
+                    <input type="hidden" id="bulan-saatini" name="bulan_ini">
+                    <input type="hidden" id="tahun-saatini" name="tahun_ini">
+                    <input type="hidden" id="gmt-saatini" name="gmt_ini">
+                    <input type="hidden" id="gmtformat-saatini" name="gmtformat_ini">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>Created by bimsdev @ 2025</p>
+    </footer>
+</body>
+<script src="assets/js/script.js"></script>
+</html>
