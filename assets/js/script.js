@@ -1,3 +1,12 @@
+// hamburger menu
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('show');
+});
+
 const carousel = document.querySelector('.carousel-images');
 const gambar = document.querySelectorAll('.carousel-images img');
 const prevButton = document.getElementById('prev');
@@ -121,5 +130,15 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         icon: 'success',
         title: 'Berhasil',
         text: 'Pesan Anda telah dikirim!',
+    });
+});
+// animasi aos
+document.addEventListener("DOMContentLoaded", function () {
+    AOS.init({
+        // jalan pas web dibuka
+        startEvent: 'DOMContentLoaded', 
+        duration: 1000,              
+        once: false,    
+        mirror: true  
     });
 });

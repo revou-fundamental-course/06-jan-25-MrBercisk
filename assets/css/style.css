@@ -30,6 +30,10 @@ nav {
     color: #333;
     text-decoration: none;
 }
+.logo img{
+    width: 60px;
+    height: 60px;
+}
 
 .nav-links {
     display: flex;
@@ -47,6 +51,45 @@ nav {
 .nav-links a:hover {
     background-color: #f0f0f0;
 }
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+
+
+.hamburger span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #333;
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* animasi nya */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-40deg) translateY(-8px);
+}
+
 /* end nav */
 
 .welcome {
@@ -162,9 +205,9 @@ button {
     transition: background-color 0.3s;
 }
 
-button:hover {
+/* button:hover {
     background-color: #0056b3;
-}
+} */
 
 footer {
     text-align: center;
@@ -229,6 +272,34 @@ footer {
     background-color: #555;
 }
 @media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background-color: #ffffff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        padding: 50px;
+    }
+
+    .nav-links a {
+        padding: 10px;
+        text-align: center;
+    }
+    .nav-links a:hover{
+        background-color: antiquewhite;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
     .welcome h1{
         font-size: 25px;
     }
