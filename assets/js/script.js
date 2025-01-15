@@ -132,6 +132,16 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         text: 'Pesan Anda telah dikirim!',
     });
 });
+
+// hasil input form
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const formRight = document.querySelector('.form-right');
+    
+    formRight.classList.add('submitted');
+    
+});
+
 // animasi aos
 document.addEventListener("DOMContentLoaded", function () {
     AOS.init({

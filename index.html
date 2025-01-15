@@ -21,8 +21,8 @@
             </button>
             <div class="nav-links">
                 <a href="#">Home</a>
-                <a href="#headquarters">Our Profile</a>
-                <a href="#">Portfolio</a>
+                <a href="#our-profile">Our Profile</a>
+                <a href="#headquarters">Our Headquarters</a>
                 <a href="#contact">Message Us</a>
             </div>
         </nav>
@@ -32,52 +32,59 @@
     
     <div class="container">
          <!-- ini pembuka welcome -->
-        <section class="welcome">
-            <h1 data-aos="fade-up" id="welcome-text">Hi Bimo, Welcome To Website</h1>
-            <p  data-aos="fade-right" data-aos-delay="200">Ini adalah website portfolio RevoU Course Software Engineer</p>
-        </section>
-        <!-- penutup welcome -->
-
-        <!-- pembuka carousel -->
-        <section class="carousel" id="carousel" data-aos="slide-left">
-            <div class="carousel-images">
-                <img src="assets/img/img1.jpg" alt="Slide 1">
-                <img src="assets/img/img2.jpg" alt="Slide 2">
-                <img src="assets/img/img3.jpg" alt="Slide 3">
+         <section class="welcome">
+            <div class="text-overlay">
+                <h1 data-aos="fade-up" id="welcome-text">Hi Bimo, Welcome To Website</h1>
+                <p data-aos="fade-right" data-aos-delay="200">Ini adalah website portfolio RevoU Course Software Engineer</p>
             </div>
-            <div class="carousel-controls">
-                <button id="prev">&lt;</button>
-                <button id="next">&gt;</button>
+            <div class="carousel-container">
+                <section class="carousel" id="carousel" data-aos="slide-left">
+                    <div class="carousel-images">
+                        <img src="assets/img/img5.jpg" alt="Slide 1">
+                        <img src="assets/img/img6.jpg" alt="Slide 2">
+                        <img src="assets/img/img4.jpg" alt="Slide 3">
+                    </div>
+                    <div class="carousel-controls">
+                        <button id="prev">&lt;</button>
+                        <button id="next">&gt;</button>
+                    </div>
+                </section>
+                <div class="dots" id="dots"></div>
             </div>
         </section>
-        <div class="dots" id="dots"></div>
+        <section class="our-profile" id="our-profile">
+            <h2 data-aos="fade-down">Our Profile</h2> 
+            <div class="isi" data-aos="fade-left" data-aos-delay="300">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam nemo aperiam libero obcaecati est exercitationem asperiores, quisquam dignissimos ratione officia aliquid, consequuntur quas deserunt rem cum omnis, vel quam ad.</p>
+            </div>
+         </section>
             <!-- penutup carousel -->
 
-        <section class="headquarters" id="headquarters" data-aos="slide-right">
+        <section class="headquarters" id="headquarters">
             <h2>Our Headquarters</h2>
             <div class="office-locations">
-                <div class="office">
+                <div class="office" data-aos="fade-right" data-aos-delay="100">
                     <div class="office-circle">
                         <h3>Jakarta</h3>
                     </div>
                 </div>
-                <div class="office">
+                <div class="office" data-aos="fade-left" data-aos-delay="200">
                     <div class="office-circle">
                         <h3>Bandung</h3>
                     </div>
                 </div>
-                <div class="office">
+                <div class="office" data-aos="fade-right" data-aos-delay="300">
                     <div class="office-circle">
                         <h3>Surabaya</h3>
                     </div>
                 </div>
             </div>
         </section>
-
+       
         <section class="contact" id="contact" data-aos="fade-down">
             <h2>Message Us</h2>
             <form class="contact-form" id="contact-form">
-                <div class="form-left">
+                <div class="form-left" data-aos="fade-left" data-aos-delay="200">
                     <div class="form-group">
                         <label for="nama">Nama :</label>
                         <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda">
@@ -89,15 +96,17 @@
                         <small class="text-danger" id="error-tgl-lahir"></small>
                     </div>
                     <div class="form-group">
-                        <label for="jeniskelamin">Jenis Kelamin</label>
-                        <label>
-                            <input type="radio" name="jeniskelamin" value="lakilaki" />
-                            Laki-Laki
-                        </label>
-                        <label>
-                            <input type="radio" name="jeniskelamin" value="perempuan" />
-                            Perempuan
-                        </label>
+                        <label for="jeniskelamin" class="genderJudul">Jenis Kelamin : </label>
+                        <div class="radio-group">
+                            <label>
+                                <input type="radio" name="jeniskelamin" value="lakilaki" />
+                                Laki-Laki
+                            </label>
+                            <label>
+                                <input type="radio" name="jeniskelamin" value="perempuan" />
+                                Perempuan
+                            </label>
+                        </div>
                         <small class="text-danger" id="error-jeniskelamin"></small>
                     </div>
                     <div class="form-group">
@@ -105,6 +114,7 @@
                         <textarea name="pesan" id="pesan" placeholder="Masukkan pesan Anda"></textarea>
                         <small class="text-danger" id="error-pesan"></small>
                     </div>
+                    <button type="submit" class="btn-submit">Submit</button>
                 </div>
                 <div class="form-right">
                     <div id="output-message"></div>
@@ -112,15 +122,16 @@
                     <input type="hidden" id="bulan-saatini" name="bulan_ini">
                     <input type="hidden" id="tahun-saatini" name="tahun_ini">
                     <input type="hidden" id="gmt-saatini" name="gmt_ini">
-                    <input type="hidden" id="gmtformat-saatini" name="gmtformat_ini">
-                    <button type="submit">Submit</button>
+                    <input type="hidden" id="gmtformat-saatini" name="gmtformat_ini">   
+                
                 </div>
+                
             </form>
-        </section>
+        </section>        
     </div>
 
     <footer>
-        <p>Created by bimsdev @ 2025</p>
+        <p class="copyright">Created by bimsdev @ 2025</p>
     </footer>
 </body>
 <script src="assets/js/script.js"></script>
