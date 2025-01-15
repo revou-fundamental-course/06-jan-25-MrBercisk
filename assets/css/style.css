@@ -7,8 +7,10 @@
 body {
     background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
     /* max-width: 1200px; */
+   
 }
 .container {
+    overflow-x: hidden;
     /* max-width: 1200px; */
     margin: 0 auto;
     /* padding: 5px; */
